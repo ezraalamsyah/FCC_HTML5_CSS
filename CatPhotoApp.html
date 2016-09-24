@@ -1,9 +1,15 @@
+<!-- Link an external object to your program (you can consider it as downloading it) -->
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<!-- CSS Styling -->
 <style>
+
+/*the dot (.) is a class declaration*/
   .red-text {
     color: red;
   }
 
+/*this will style all related elements*/
   h2 {
     font-family: Lobster, Monospace;
   }
@@ -27,7 +33,8 @@
   .gray-background {
     background-color: gray;
   }
-  
+
+/*this will style the element with that ID*/
   #cat-photo-form {
     background-color: green;
   }
@@ -35,18 +42,26 @@
 
 <h2 class="red-text">CatPhotoApp</h2>
 
+<!-- anchor (a) is to make a text or image clickable (make it a link) -->
+<!-- href="#" will make a null link (it's clickable, but you go nowhere) -->
 <p>Click here for <a href="#">cat photos</a>.</p>
 
+<!-- the alt is the value of text underlaying the image, src is where to get the image from -->
 <a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
 
+<!-- div is to nest elements -->
 <div class="gray-background">
   <p>Things cats love:</p>
+
+  <!-- ul is for unordered list -->
   <ul>
+  <!-- make a list -->
     <li>cat nip</li>
     <li>laser pointers</li>
     <li>lasagna</li>
   </ul>
   <p>Top 3 things cats hate:</p>
+  <!-- ol is for ordered list -->
   <ol>
     <li>flea treatment</li>
     <li>thunder</li>
