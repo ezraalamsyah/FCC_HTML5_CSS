@@ -1,80 +1,87 @@
 <!-- Link an external object to your program (you can consider it as downloading it) -->
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<!-- CSS dynamic framework -->
+
+<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/> -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 <!-- CSS Styling -->
 <style>
-
-/*the dot (.) is a class declaration*/
-  .red-text {
-    color: red;
-  }
-
-/*this will style all related elements*/
-  h2 {
-    font-family: Lobster, Monospace;
-  }
-
-  p {
-    font-size: 16px;
-    font-family: Monospace;
-  }
-
-  .thick-green-border {
-    border-color: green;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-  }
-
-  .smaller-image {
-    width: 100px;
-  }
-
-  .gray-background {
-    background-color: gray;
-  }
-
-/*this will style the element with that ID*/
-  #cat-photo-form {
-    background-color: green;
-  }
+   /*the dot (.) is a class declaration*/
+   .red-text {
+   color: red;
+   }
+   /*this will style all related elements*/
+   h2 {
+   font-family: Lobster, Monospace;
+   }
+   p {
+   font-size: 16px;
+   font-family: Monospace;
+   }
+   .thick-green-border {
+   border-color: green;
+   border-width: 10px;
+   border-style: solid;
+   border-radius: 50%;
+   }
+   .smaller-image {
+   width: 100px;
+   }
+   .gray-background {
+   background-color: gray;
+   }
+   /*this will style the element with that ID*/
+   #cat-photo-form {
+   background-color: green;
+   }
 </style>
+<!-- put all html elements inside div and give it container fluid class 
+   This is done in order to make the program fluid in any device-->
+<div class="container-fluid">
+   <!-- text-center class will put the text in the center of the screen -->
+   <h2 class="red-text text-center">CatPhotoApp</h2>
+   <!-- anchor (a) is to make a text or image clickable (make it a link) -->
+   <!-- href="#" will make a null link (it's clickable, but you go nowhere) -->
+   <p>Click here for <a href="#">cat photos</a>.</p>
+   <!-- the alt is the value of text underlaying the image, src is where to get the image from -->
+   <a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
+   <!-- make the image responsive with img-responsive class -->
+   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera. ">
+   <!-- add a bootstrap button (with class btn) which is stretched 
 
-<h2 class="red-text">CatPhotoApp</h2>
-
-<!-- anchor (a) is to make a text or image clickable (make it a link) -->
-<!-- href="#" will make a null link (it's clickable, but you go nowhere) -->
-<p>Click here for <a href="#">cat photos</a>.</p>
-
-<!-- the alt is the value of text underlaying the image, src is where to get the image from -->
-<a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
-
-<!-- div is to nest elements -->
-<div class="gray-background">
-  <p>Things cats love:</p>
-
-  <!-- ul is for unordered list -->
-  <ul>
-  <!-- make a list -->
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-  <!-- ol is for ordered list -->
-  <ol>
-    <li>flea treatment</li>
-    <li>thunder</li>
-    <li>other cats</li>
-  </ol>
+   btn-primary/info/danger gives you different button color-->
+   <button class="btn btn-block btn-primary">Like</button>
+   <button class="btn btn-block btn-info">Info</button>
+   <button class="btn btn-block btn-danger">Delete</button>
+   <!-- div is to nest elements -->
+   <div class="gray-background">
+      <p>Things cats love:</p>
+      <!-- ul is for unordered list -->
+      <ul>
+         <!-- make a list -->
+         <li>cat nip</li>
+         <li>laser pointers</li>
+         <li>lasagna</li>
+      </ul>
+      <p>Top 3 things cats hate:</p>
+      <!-- ol is for ordered list -->
+      <ol>
+         <li>flea treatment</li>
+         <li>thunder</li>
+         <li>other cats</li>
+      </ol>
+   </div>
+   <form action="/submit-cat-photo" id="cat-photo-form">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label>
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+   </form>
 </div>
-
-<form action="/submit-cat-photo" id="cat-photo-form">
-  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality" checked> Loving</label>
-  <label><input type="checkbox" name="personality"> Lazy</label>
-  <label><input type="checkbox" name="personality"> Energetic</label>
-  <input type="text" placeholder="cat photo URL" required>
-  <button type="submit">Submit</button>
-</form>
