@@ -1,0 +1,106 @@
+<!-- Link an external object to your program (you can consider it as downloading it) -->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<!-- CSS dynamic framework 
+Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="C:/Users/Foofoo/Documents/GitHub/FCC_HTML5_CSS/font-awesome-4.6.3/css/font-awesome.min.css">
+
+<!-- CSS Styling -->
+<style>
+   
+   /*this will style all related elements*/
+   h2 {
+   font-family: Lobster, Monospace;
+   }
+
+   .thick-green-border {
+   border-color: green;
+   border-width: 10px;
+   border-style: solid;
+   border-radius: 50%;
+   }
+  
+</style>
+<!-- put all html elements inside div and give it container fluid class 
+   This is done in order to make the program fluid in any device-->
+<div class="container-fluid">
+   
+   <div class="row">
+      <div class="col-xs-8">
+          <!-- text-center class will put the text in the center of the screen -->
+         <h2 class="text-primary text-center">CatPhotoApp</h2>
+      </div>
+      <div class="col-xs-4">
+         <!-- the alt is the value of text underlaying the image, src is where to get the image from -->
+         <a href="#"><img class="img-responsive thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
+   </div>
+   <!-- make the image responsive with img-responsive class -->
+   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera. ">
+   <!-- add a bootstrap button (with class btn) which is stretched 
+
+   btn-primary/info/danger gives you different button color
+
+   the row class put them the elements in row, and the col will columned them-->
+   <div class="row">
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up">Like</i></button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-info"><i class="fa fa-info-circle">Info</i></button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-danger"><i class="fa fa-trash">Delete</i></button>
+    </div>
+  </div>
+   <!-- div is to nest elements -->
+   <div class="gray-background">
+      <p>Things cats <span class="text-danger">love:</span></p>
+      <!-- ul is for unordered list -->
+      <ul>
+         <!-- make a list -->
+         <li>cat nip</li>
+         <li>laser pointers</li>
+         <li>lasagna</li>
+      </ul>
+      <p>Top 3 things cats hate:</p>
+      <!-- ol is for ordered list -->
+      <ol>
+         <li>flea treatment</li>
+         <li>thunder</li>
+         <li>other cats</li>
+      </ol>
+   </div>
+   <form action="/submit-cat-photo" id="cat-photo-form">
+      <div class="row">
+         <div class="col-xs-6">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+         </div>
+         <div class="col-xs-6">
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-xs-6">   
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+         </div>   
+         <div class="col-xs-6">
+            <label><input type="checkbox" name="personality"> Lazy</label>
+         </div>
+         <div class="col-xs-6">   
+            <label><input type="checkbox" name="personality"> Energetic</label>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-xs-7">
+            <input class="form-control" type="text" placeholder="cat photo URL" required>
+         </div>
+         <div class="col-xs-5">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane">Submit</i></button>
+         </div>
+      </div>
+   </form>
+</div>
